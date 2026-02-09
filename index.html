@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompliancePro | 20 Years of IT Governance & DPDP Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --accent-primary: #818cf8; /* Indigo */
+            --accent-secondary: #2dd4bf; /* Teal */
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 35%),
+                radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 35%);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-tabs {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+            border-radius: 100px;
+            border: 1px solid var(--border-color);
+            display: flex;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.4rem;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .tab-btn.active {
+            background: var(--accent-primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        /* --- Main Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .highlight-box {
+            border-left: 2px solid var(--accent-secondary);
+            padding: 1rem 2rem;
+            background: rgba(45, 212, 191, 0.05);
+            border-radius: 0 16px 16px 0;
+            margin: 2rem 0;
+            color: var(--accent-secondary);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        /* --- Grid & Bento Styling --- */
+        .grid-bento {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .bento-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .bento-item:hover {
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .bento-item i {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .bento-item h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        /* --- Services List --- */
+        .service-feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tool-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Footer & Contact --- */
+        .footer-minimal {
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-btn-premium {
+            background: white;
+            color: black;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn-premium:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 850px) {
+            .grid-bento, .service-feature {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2.2rem; }
+            .nav-container { flex-direction: column; gap: 1.5rem; }
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: slideUp 0.5s ease-out; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">COMPLIANCE<span style="color:var(--text-muted)">PRO</span></div>
+            <nav class="nav-tabs">
+                <button class="tab-btn active" onclick="showTab('about')">Expertise</button>
+                <button class="tab-btn" onclick="showTab('services')">AI-Tools</button>
+                <button class="tab-btn" onclick="showTab('contact')">Connect</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about" class="tab-content active">
+            <div class="glass-card">
+                <span class="tool-tag">Two Decades of Excellence</span>
+                <h1>Precision in IT Governance.</h1>
+                <p class="highlight-box">Integrity and compliance are no longer "features"—they are the bedrock of business survival in the data era.</p>
+                
+                <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 2rem;">
+                    Our 20-year journey started in Software Testing, honing an uncompromising eye for detail. 
+                    Today, we bridge the gap between technical operations and strategic oversight, specializing in DPDP compliance and IT standards.
+                </p>
+
+                <div class="grid-bento">
+                    <div class="bento-item">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Quality Assurance</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">20 years of ensuring software doesn't just work—it excels under regulatory pressure.</p>
+                    </div>
+                    <div class="bento-item">
+                        <i class="fas fa-fingerprint"></i>
+                        <h3>DPDP Strategy</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Navigating India's new regulatory chapter with a roadmap, not just a checklist.</p>
+                    </div>
+                    <div class="bento-item">
+                        <i class="fas fa-shield-halved"></i>
+                        <h3>Governance</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Implementing international standards that ensure systemic accountability.</p>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top: 3rem;">
+                    <p style="margin-bottom: 1.5rem;">Ready to benchmark your DPDP readiness?</p>
+                    <button class="cta-btn-premium" onclick="showTab('contact')">Get Audit Checklist</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="tab-content">
+            <div class="glass-card">
+                <span class="tool-tag">Modern Methodology</span>
+                <h1>AI-Augmented Compliance.</h1>
+                <p style="color: var(--text-muted);">We combine "human-in-the-loop" expertise with cutting-edge AI to eliminate manual error and accelerate DPDP adoption.</p>
+
+                <div class="service-feature">
+                    <div class="feature-card">
+                        <span class="tool-tag">LLM-Powered</span>
+                        <h3>AI Gap Analysis</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Automated scanning of existing policies and data flows to identify instant compliance gaps against 2023 mandates.</p>
+                    </div>
+<div class="feature-card" style="border-left: 3px solid #632ca6;"> <span class="tool-tag" style="color: #632ca6;">Real-time Observability</span>
+        <h3>Continuous Compliance Monitoring (Datadog)</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">
+            Moving beyond point-in-time audits, we implement <strong>Datadog Cloud Security Management</strong> to provide 24/7 visibility into your compliance posture.
+        </p>
+        <ul style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; padding-left: 1.2rem;">
+            <li><strong>Sensitive Data Scanner:</strong> Automatically detects and redacts PII/SPII across logs and traces before they are stored.</li>
+            <li><strong>Posturing & Drift Detection:</strong> Instant alerts when a cloud configuration change (like an open S3 bucket) violates DPDP standards.</li>
+            <li><strong>Audit Trail Tracking:</strong> Maintains an immutable record of "who accessed what data and when"—a core requirement for DPDP accountability.</li>
+        </ul>
+    </div>
+                    <div class="feature-card">
+                        <span class="tool-tag">Automation</span>
+                        <h3>Cookie & Consent</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Dynamic tracking and blocking of third-party scripts ensuring prior-consent is non-negotiable.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="tool-tag">Blockchain/Hashing</span>
+                        <h3>Immutable Logs</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Tamper-proof evidence of consent for regulatory bodies using SHA-256 hashing protocols.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="tool-tag">Machine Learning</span>
+                        <h3>Dark Data Discovery</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Identifying personal info hidden in unstructured PDFs or emails to ensure 100% RoPA accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <div class="glass-card" style="text-align: center;">
+                <h1>Start the Conversation.</h1>
+                <p style="color: var(--text-muted); margin-bottom: 3rem;">Consultancy specialized for India's DPDP landscape.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                    <div>
+                        <i class="fas fa-paper-plane" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                        <p>info@compliancepro.com</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-location-dot" style="color: var(--accent-secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                        <p>Bengaluru, India</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                        <p>+91 80 1234 5678</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem; padding: 2rem; border-radius: 20px; background: rgba(255,255,255,0.03);">
+                    <h3>Schedule a 15-Minute Demo</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 1rem 0 2rem;">See our AI-driven scanning tools in action.</p>
+                    <button class="cta-btn-premium">Book Appointment</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-minimal">
+        <p>&copy; 2026 CompliancePro Solutions. 20 Years of IT Integrity.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
