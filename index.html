@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -97,7 +97,7 @@
             margin: 4rem auto;
             padding: 0 2rem;
         }
-<p style="color: var(--text-muted); max-width: 800px; margin-bottom: 2rem;">
+
         .glass-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -229,6 +229,77 @@
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
+:root {
+  --bg-dark:#0f172a;
+  --accent-primary:#818cf8;
+  --accent-secondary:#2dd4bf;
+  --card-bg:rgba(30,41,59,.7);
+  --border-color:rgba(255,255,255,.1);
+  --text-main:#f8fafc;
+  --text-muted:#94a3b8;
+  --transition-smooth:all .4s cubic-bezier(.23,1,.32,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Inter,sans-serif;
+  background-color:var(--bg-dark);
+  color:var(--text-main);
+}
+
+/* CTA */
+.cta-btn-premium{
+  background:white;
+  color:black;
+  padding:1rem 2.5rem;
+  border-radius:100px;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+}
+
+/* ---------- MODAL STYLES (NEW) ---------- */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(6px);
+  z-index:3000;
+}
+
+.modal-content{
+  background:var(--card-bg);
+  max-width:420px;
+  margin:10% auto;
+  padding:2.5rem;
+  border-radius:20px;
+  border:1px solid var(--border-color);
+}
+
+.modal-content h2{margin-bottom:1.5rem}
+
+.modal-content input{
+  width:100%;
+  padding:.9rem;
+  margin-bottom:1rem;
+  border-radius:10px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--border-color);
+  color:white;
+}
+
+.modal-content label{
+  font-size:.85rem;
+  color:var(--text-muted);
+}
+
+.close{
+  float:right;
+  font-size:1.4rem;
+  cursor:pointer;
+}
     </style>
 </head>
 <body>
@@ -251,10 +322,9 @@
                 <h1>Precision in IT Governance.</h1>
                 <p class="highlight-box">Integrity and compliance are no longer "features"—they are the bedrock of business survival in the data era.</p>
                 
-                
-                    Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail. Today, 
-                    we bridge the gap between technical operations and strategic oversight, delivering expertise in   DPDP compliance and IT standards. 
-                </p>
+                <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 2rem;">
+                    Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail. 
+                   Today, we bridge the gap between technical operations and strategic oversight, delivering expertise in DPDP compliance and IT standards               </p>
 
                 <div class="grid-bento">
                     <div class="bento-item">
@@ -331,7 +401,7 @@
                 <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
                     <div>
                         <i class="fas fa-paper-plane" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-                        <p>sales@dpdpaudits.in</p>
+                        <p>sales@dpdpaudits.com</p>
                     </div>
                     <div>
                         <i class="fas fa-location-dot" style="color: var(--accent-secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
@@ -346,7 +416,7 @@
                 <div style="margin-top: 4rem; padding: 2rem; border-radius: 20px; background: rgba(255,255,255,0.03);">
                     <h3>Schedule a 15-Minute Demo</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin: 1rem 0 2rem;">See our AI-driven scanning tools in action.</p>
-                    <button class="cta-btn-premium">Book Appointment</button>
+                    <button class="cta-btn-premium" onclick="openModal()">Book Appointment</button>
                 </div>
             </div>
         </section>
@@ -373,5 +443,63 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+<div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>Book Appointment</h2>
+
+    <form id="appointmentForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+
+      <label>
+        <input type="checkbox" required>
+        I consent to being contacted as per DPDP Act, 2023
+      </label>
+
+      <button class="cta-btn-premium" style="width:100%;margin-top:1rem">
+        Submit
+      </button>
+
+      <p id="formStatus" style="margin-top:1rem;font-size:.9rem"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ---------- EMAILJS ---------- -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+emailjs.init("c5VhH6fmpC3czGMyZ"); // 🔴 replace
+
+function openModal(){
+  document.getElementById("appointmentModal").style.display="block";
+}
+
+function closeModal(){
+  document.getElementById("appointmentModal").style.display="none";
+}
+
+document.getElementById("appointmentForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const status=document.getElementById("formStatus");
+  status.innerText="Sending...";
+
+  emailjs.sendForm(
+   "service_5hxwwjs", // 🔴 replace
+   "template_l7lwzze",      // 🔴 replace
+    this
+  ).then(()=>{
+    status.style.color="#2dd4bf";
+    status.innerText="Appointment request sent successfully!";
+    this.reset();
+  },()=>{
+    status.style.color="red";
+    status.innerText="Failed to send. Please try again.";
+  });
+});
+</script>
 </body>
 </html>
