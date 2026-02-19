@@ -1,54 +1,51 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompliancePro | 20 Years of IT Governance & DPDP Excellence</title>
+    <title>CompliancePro | AI-Native DPDP Compliance Platform</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg-dark: #0f172a;
-            --accent-primary: #818cf8; /* Indigo */
-            --accent-secondary: #2dd4bf; /* Teal */
+            --accent-primary: #818cf8;
+            --accent-secondary: #2dd4bf;
             --card-bg: rgba(30, 41, 59, 0.7);
             --border-color: rgba(255, 255, 255, 0.1);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-smooth: all 0.4s cubic-bezier(.23,1,.32,1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-dark);
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
             background-image: 
                 radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 35%),
                 radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 35%);
-            color: var(--text-main);
-            line-height: 1.6;
-            min-height: 100vh;
         }
 
-        /* --- Header & Navigation --- */
+        /* ---------------- NAV ---------------- */
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             padding: 1rem 0;
         }
 
         .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,43 +54,34 @@
 
         .logo {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: -1px;
+            font-size: 1.4rem;
             background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .nav-tabs {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 4px;
-            border-radius: 100px;
-            border: 1px solid var(--border-color);
-            display: flex;
-        }
+        .nav-tabs { display: flex; gap: .5rem; flex-wrap: wrap; }
 
         .tab-btn {
             background: transparent;
-            border: none;
+            border: 1px solid var(--border-color);
+            padding: .6rem 1.3rem;
+            border-radius: 50px;
             color: var(--text-muted);
-            padding: 0.6rem 1.4rem;
-            border-radius: 100px;
             cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
             transition: var(--transition-smooth);
+            font-size: 0.9rem;
         }
 
-        .tab-btn.active {
+        .tab-btn.active, .tab-btn:hover {
             background: var(--accent-primary);
             color: white;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
-        /* --- Main Layout --- */
+        /* ---------------- LAYOUT ---------------- */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
         }
@@ -101,125 +89,27 @@
         .glass-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 24px;
+            border-radius: 28px;
             padding: 3rem;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            font-size: 2.6rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(to right, #ffffff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .highlight-box {
-            border-left: 2px solid var(--accent-secondary);
-            padding: 1rem 2rem;
-            background: rgba(45, 212, 191, 0.05);
-            border-radius: 0 16px 16px 0;
-            margin: 2rem 0;
-            color: var(--accent-secondary);
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-
-        /* --- Grid & Bento Styling --- */
-        .grid-bento {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .bento-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 20px;
-            transition: var(--transition-smooth);
-        }
-
-        .bento-item:hover {
-            border-color: var(--accent-primary);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-        }
-
-        .bento-item i {
-            font-size: 2rem;
-            color: var(--accent-primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .bento-item h3 {
-            margin-bottom: 0.75rem;
-            font-size: 1.2rem;
-        }
-
-        /* --- Services List --- */
-        .service-feature {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-        }
-
         .tool-tag {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
+            font-size: .75rem;
             color: var(--accent-secondary);
             text-transform: uppercase;
             letter-spacing: 1px;
             display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        /* --- Footer & Contact --- */
-        .footer-minimal {
-            text-align: center;
-            padding: 4rem 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .cta-btn-premium {
-            background: white;
-            color: black;
-            padding: 1rem 2.5rem;
-            border-radius: 100px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn-premium:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 850px) {
-            .grid-bento, .service-feature {
-                grid-template-columns: 1fr;
-            }
-            h1 { font-size: 2.2rem; }
-            .nav-container { flex-direction: column; gap: 1.5rem; }
+            margin-bottom: .8rem;
         }
 
         .tab-content { display: none; }
@@ -229,277 +119,225 @@
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
-:root {
-  --bg-dark:#0f172a;
-  --accent-primary:#818cf8;
-  --accent-secondary:#2dd4bf;
-  --card-bg:rgba(30,41,59,.7);
-  --border-color:rgba(255,255,255,.1);
-  --text-main:#f8fafc;
-  --text-muted:#94a3b8;
-  --transition-smooth:all .4s cubic-bezier(.23,1,.32,1);
-}
 
-*{margin:0;padding:0;box-sizing:border-box}
+        /* ---------------- ARCHITECTURE IMAGE STYLE ---------------- */
+        .img-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
 
-body{
-  font-family:Inter,sans-serif;
-  background-color:var(--bg-dark);
-  color:var(--text-main);
-}
+        .arch-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
 
-/* CTA */
-.cta-btn-premium{
-  background:white;
-  color:black;
-  padding:1rem 2.5rem;
-  border-radius:100px;
-  font-weight:600;
-  border:none;
-  cursor:pointer;
-}
+        /* ---------------- GRIDS ---------------- */
+        .premium-grid, .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
 
-/* ---------- MODAL STYLES (NEW) ---------- */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.7);
-  backdrop-filter:blur(6px);
-  z-index:3000;
-}
+        .premium-card, .card-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 22px;
+            transition: var(--transition-smooth);
+        }
 
-.modal-content{
-  background:var(--card-bg);
-  max-width:420px;
-  margin:10% auto;
-  padding:2.5rem;
-  border-radius:20px;
-  border:1px solid var(--border-color);
-}
+        .premium-card:hover, .card-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-primary);
+        }
 
-.modal-content h2{margin-bottom:1.5rem}
+        .premium-card i {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            display: block;
+        }
 
-.modal-content input{
-  width:100%;
-  padding:.9rem;
-  margin-bottom:1rem;
-  border-radius:10px;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border-color);
-  color:white;
-}
+        .highlight-premium, .highlight-card {
+            border: 1px solid var(--accent-secondary);
+            background: rgba(45, 212, 191, 0.08);
+        }
 
-.modal-content label{
-  font-size:.85rem;
-  color:var(--text-muted);
-}
+        .mini-cta {
+            display: inline-block;
+            margin-top: 1.2rem;
+            font-size: .85rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--accent-secondary);
+        }
 
-.close{
-  float:right;
-  font-size:1.4rem;
-  cursor:pointer;
-}
+        /* ---------------- MODAL & UI ---------------- */
+        .cta-btn-premium {
+            background: white;
+            color: black;
+            padding: 1rem 2.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); backdrop-filter: blur(6px); z-index: 3000; }
+        .modal-content { background: #1e293b; max-width: 420px; margin: 10% auto; padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border-color); }
+        .modal-content input { width: 100%; padding: .9rem; margin-bottom: 1rem; border-radius: 10px; background: rgba(255,255,255,.05); border: 1px solid var(--border-color); color: white; }
+
+        footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); margin-top: 4rem; color: var(--text-muted); }
+
+        @media(max-width: 1000px) { 
+            .grid-layout, .premium-grid { grid-template-columns: repeat(2, 1fr); } 
+        }
+        @media(max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 1rem; }
+            .grid-layout, .premium-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">COMPLIANCE<span style="color:var(--text-muted)">PRO</span></div>
-            <nav class="nav-tabs">
-                <button class="tab-btn active" onclick="showTab('about')">Expertise</button>
-                <button class="tab-btn" onclick="showTab('services')">AI-Tools</button>
-                <button class="tab-btn" onclick="showTab('contact')">Connect</button>
-            </nav>
+<header>
+    <div class="nav-container">
+        <div class="logo">COMPLIANCE<span style="color:#94a3b8">PRO</span></div>
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab(event,'about')">Expertise</button>
+            <button class="tab-btn" onclick="showTab(event,'services')">Platform</button>
+            <button class="tab-btn" onclick="showTab(event,'architecture')">Architecture</button>
+            <button class="tab-btn" onclick="showTab(event,'investor')">Investor</button>
+            <button class="tab-btn" onclick="showTab(event,'contact')">Connect</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <section id="about" class="tab-content active">
+        <div class="glass-card">
+            <span class="tool-tag">Two Decades of Excellence</span>
+            <h1>Precision in IT Governance.</h1>
+            <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 2rem;">
+                Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail. 
+                Today, we bridge the gap between technical operations and strategic oversight.
+            </p>
+            <div class="grid-layout">
+                <div class="card-item"><i class="fas fa-microscope" style="color:var(--accent-primary); font-size:2rem; margin-bottom:1.5rem;"></i><h3>Quality Assurance</h3><p style="color:var(--text-muted); font-size:0.9rem;">20 years of ensuring software excels under regulatory pressure.</p></div>
+                <div class="card-item"><i class="fas fa-fingerprint" style="color:var(--accent-primary); font-size:2rem; margin-bottom:1.5rem;"></i><h3>DPDP Strategy</h3><p style="color:var(--text-muted); font-size:0.9rem;">Navigating India's new regulatory chapter with a roadmap.</p></div>
+                <div class="card-item"><i class="fas fa-shield-halved" style="color:var(--accent-primary); font-size:2rem; margin-bottom:1.5rem;"></i><h3>Governance</h3><p style="color:var(--text-muted); font-size:0.9rem;">Implementing international standards that ensure accountability.</p></div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <div class="container">
-        <section id="about" class="tab-content active">
-            <div class="glass-card">
-                <span class="tool-tag">Two Decades of Excellence</span>
-                <h1>Precision in IT Governance.</h1>
-                <p class="highlight-box">Integrity and compliance are no longer "features"—they are the bedrock of business survival in the data era.</p>
-                
-                <p style="color: var(--text-muted); max-width: 800px; margin-bottom: 2rem;">
-                    Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail. 
-                   Today, we bridge the gap between technical operations and strategic oversight, delivering expertise in DPDP compliance and IT standards               </p>
-
-                <div class="grid-bento">
-                    <div class="bento-item">
-                        <i class="fas fa-microscope"></i>
-                        <h3>Quality Assurance</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">20 years of ensuring software doesn't just work—it excels under regulatory pressure.</p>
-                    </div>
-                    <div class="bento-item">
-                        <i class="fas fa-fingerprint"></i>
-                        <h3>DPDP Strategy</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Navigating India's new regulatory chapter with a roadmap, not just a checklist.</p>
-                    </div>
-                    <div class="bento-item">
-                        <i class="fas fa-shield-halved"></i>
-                        <h3>Governance</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Implementing international standards that ensure systemic accountability.</p>
-                    </div>
-                </div>
-
-                <div style="text-align:center; margin-top: 3rem;">
-                    <p style="margin-bottom: 1.5rem;">Ready to benchmark your DPDP readiness?</p>
-                    <button class="cta-btn-premium" onclick="showTab('contact')">Get Audit Checklist</button>
+    <section id="services" class="tab-content">
+        <div class="glass-card">
+            <span class="tool-tag">AI Compliance Suite</span>
+            <h1>Modular SaaS Platform</h1>
+            <div class="premium-grid">
+                <div class="premium-card"><i class="fas fa-brain"></i><h3>AI Gap Analysis</h3><p>LLM-powered detection of compliance gaps in policies and workflows.</p></div>
+                <div class="premium-card"><i class="fas fa-chart-line"></i><h3>Continuous Monitoring</h3><p>Real-time compliance posture tracking and drift alerts.</p></div>
+                <div class="premium-card"><i class="fas fa-cookie-bite"></i><h3>Consent Automation</h3><p>Lifecycle management and audit-ready consent evidence.</p></div>
+                <div class="premium-card"><i class="fas fa-database"></i><h3>Dark Data Discovery</h3><p>ML-driven detection of hidden personal data in unstructured sources.</p></div>
+                <div class="premium-card"><i class="fas fa-link"></i><h3>Immutable Logs</h3><p>Hash-based tamper-proof audit trail system.</p></div>
+                <div class="premium-card highlight-premium">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>DPDP Employee Training</h3>
+                    <p>Role-based awareness modules with certification and audit reporting.</p>
+                    <a href="https://dpdp-awareness.onrender.com/" target="_blank" class="mini-cta">Access Awareness Program →</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="services" class="tab-content">
-            <div class="glass-card">
-                <span class="tool-tag">Modern Methodology</span>
-                <h1>AI-Augmented Compliance.</h1>
-                <p style="color: var(--text-muted);">We combine "human-in-the-loop" expertise with cutting-edge AI to eliminate manual error and accelerate DPDP adoption.</p>
-
-                <div class="service-feature">
-                    <div class="feature-card">
-                        <span class="tool-tag">LLM-Powered</span>
-                        <h3>AI Gap Analysis</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Automated scanning of existing policies and data flows to identify instant compliance gaps against 2023 mandates.</p>
-                    </div>
-<div class="feature-card" style="border-left: 3px solid #632ca6;"> <span class="tool-tag" style="color: #632ca6;">Real-time Observability</span>
-        <h3>Continuous Compliance Monitoring (Datadog)</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">
-            Moving beyond point-in-time audits, we implement <strong>Datadog Cloud Security Management</strong> to provide 24/7 visibility into your compliance posture.
-        </p>
-        <ul style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; padding-left: 1.2rem;">
-            <li><strong>Sensitive Data Scanner:</strong> Automatically detects and redacts PII/SPII across logs and traces before they are stored.</li>
-            <li><strong>Posturing & Drift Detection:</strong> Instant alerts when a cloud configuration change (like an open S3 bucket) violates DPDP standards.</li>
-            <li><strong>Audit Trail Tracking:</strong> Maintains an immutable record of "who accessed what data and when"—a core requirement for DPDP accountability.</li>
-        </ul>
-    </div>
-                    <div class="feature-card">
-                        <span class="tool-tag">Automation</span>
-                        <h3>Cookie & Consent</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Dynamic tracking and blocking of third-party scripts ensuring prior-consent is non-negotiable.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="tool-tag">Blockchain/Hashing</span>
-                        <h3>Immutable Logs</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Tamper-proof evidence of consent for regulatory bodies using SHA-256 hashing protocols.</p>
-                    </div>
-                    <div class="feature-card">
-                        <span class="tool-tag">Machine Learning</span>
-                        <h3>Dark Data Discovery</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">Identifying personal info hidden in unstructured PDFs or emails to ensure 100% RoPA accuracy.</p>
-                    </div>
-                </div>
+    <section id="architecture" class="tab-content">
+        <div class="glass-card">
+            <span class="tool-tag">Scalable SaaS Design</span>
+                        
+            <div class="img-container">
+                <img src="platform-architecture.png" alt="CompliancePro Platform Architecture" class="arch-image">
             </div>
-        </section>
 
-        <section id="contact" class="tab-content">
-            <div class="glass-card" style="text-align: center;">
-                <h1>Start the Conversation.</h1>
-                <p style="color: var(--text-muted); margin-bottom: 3rem;">Consultancy specialized for India's DPDP landscape.</p>
-                
-                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
-                    <div>
-                        <i class="fas fa-paper-plane" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-                        <p>sales@dpdpaudits.in</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-location-dot" style="color: var(--accent-secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-                        <p>Bengaluru, India</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-phone" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-                        <p>+91 7353528222</p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 4rem; padding: 2rem; border-radius: 20px; background: rgba(255,255,255,0.03);">
-                    <h3>Schedule a 15-Minute Demo</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin: 1rem 0 2rem;">See our AI-driven scanning tools in action.</p>
-                    <button class="cta-btn-premium" onclick="openModal()">Book Appointment</button>
-                </div>
+            <div class="grid-layout">
+                <div class="card-item"><h3>Data Ingestion</h3><p style="color: var(--text-muted);">APIs, logs, CRMs, cloud connectors.</p></div>
+                <div class="card-item"><h3>AI Intelligence Layer</h3><p style="color: var(--text-muted);">LLMs for policy review and ML for data discovery.</p></div>
+                <div class="card-item"><h3>Compliance Engine</h3><p style="color: var(--text-muted);">Consent workflows and breach orchestration.</p></div>
+                <div class="card-item"><h3>Observability</h3><p style="color: var(--text-muted);">Continuous posture monitoring and alerts.</p></div>
+                <div class="card-item"><h3>Governance Dashboard</h3><p style="color: var(--text-muted);">Board-level reporting and risk heatmaps.</p></div>
+                <div class="card-item highlight-card"><h3>Human Layer</h3><p style="color: var(--text-muted);">Employee awareness and certification tracking.</p></div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer class="footer-minimal">
-        <p>&copy; 2026 CompliancePro Solutions. 20 Years of IT Integrity.</p>
-    </footer>
+    <section id="investor" class="tab-content">
+        <div class="glass-card">
+            <span class="tool-tag">Angel Opportunity</span>
+            <h1>India’s AI-First DPDP Infrastructure Play</h1>
+            <div class="grid-layout">
+                <div class="card-item"><h3>🚨 Problem</h3><p style="color: var(--text-muted);">Fragmented compliance tools and heavy consultancy dependency.</p></div>
+                <div class="card-item"><h3>💡 Solution</h3><p style="color: var(--text-muted);">AI-native modular compliance SaaS platform.</p></div>
+                <div class="card-item"><h3>📈 Market</h3><p style="color: var(--text-muted);">1M+ Indian businesses impacted by DPDP.</p></div>
+                <div class="card-item"><h3>💰 Revenue</h3><p style="color: var(--text-muted);">Annual SaaS + per-employee training license.</p></div>
+                <div class="card-item"><h3>🧠 Moat</h3><p style="color: var(--text-muted);">AI compliance models + regulatory data network effects.</p></div>
+                <div class="card-item highlight-card"><h3>🚀 Traction Strategy</h3><p style="color: var(--text-muted);">DPDP Awareness rollout + Bengaluru tech early adopters.</p></div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function showTab(tabId) {
-            // Hide all
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+    <section id="contact" class="tab-content">
+        <div class="glass-card" style="text-align: center;">
+            <h1>Start the Conversation.</h1>
+            <p style="color: var(--text-muted); margin-bottom: 3rem;">Consultancy specialized for India's DPDP landscape.</p>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem;">
+                <div><i class="fas fa-paper-plane" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i><p>sales@dpdpaudits.in</p></div>
+                <div><i class="fas fa-location-dot" style="color: var(--accent-secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i><p>Bengaluru, India</p></div>
+                <div><i class="fas fa-phone" style="color: var(--accent-primary); font-size: 1.5rem; margin-bottom: 1rem;"></i><p>+91 7353528222</p></div>
+            </div>
+            <button class="cta-btn-premium" onclick="openModal()">Book Appointment</button>
+        </div>
+    </section>
 
-            // Show selected
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-<div id="appointmentModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-
-    <h2>Book Appointment</h2>
-
-    <form id="appointmentForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-
-      <label>
-        <input type="checkbox" required>
-        I consent to being contacted as per DPDP Act, 2023
-      </label>
-
-      <button class="cta-btn-premium" style="width:100%;margin-top:1rem">
-        Submit
-      </button>
-
-      <p id="formStatus" style="margin-top:1rem;font-size:.9rem"></p>
-    </form>
-  </div>
 </div>
 
-<!-- ---------- EMAILJS ---------- -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<footer>
+    <p>&copy; 2026 CompliancePro Solutions. 20 Years of IT Integrity.</p>
+</footer>
+
+<div id="appointmentModal" class="modal">
+    <div class="modal-content">
+        <span style="float:right; cursor:pointer;" onclick="closeModal()">&times;</span>
+        <h2>Book Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button class="cta-btn-premium" style="width:100%; border-radius: 10px;">Submit Request</button>
+        </form>
+    </div>
+</div>
 
 <script>
-emailjs.init("c5VhH6fmpC3czGMyZ"); // 🔴 replace
-
-function openModal(){
-  document.getElementById("appointmentModal").style.display="block";
-}
-
-function closeModal(){
-  document.getElementById("appointmentModal").style.display="none";
-}
-
-document.getElementById("appointmentForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  const status=document.getElementById("formStatus");
-  status.innerText="Sending...";
-
-  emailjs.sendForm(
-   "service_5hxwwjs", // 🔴 replace
-   "template_l7lwzze",      // 🔴 replace
-    this
-  ).then(()=>{
-    status.style.color="#2dd4bf";
-    status.innerText="Appointment request sent successfully!";
-    this.reset();
-  },()=>{
-    status.style.color="red";
-    status.innerText="Failed to send. Please try again.";
-  });
-});
+    function showTab(event, tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function openModal() { document.getElementById("appointmentModal").style.display = "block"; }
+    function closeModal() { document.getElementById("appointmentModal").style.display = "none"; }
 </script>
+
 </body>
 </html>
