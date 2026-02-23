@@ -178,6 +178,66 @@
             color: var(--accent-secondary);
         }
 
+        /* ---------------- AI GAP ANALYSIS CARD (NEW) ---------------- */
+        .premium-card.clickable {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-card.clickable::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.08), transparent 70%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .premium-card.clickable:hover {
+            border-color: var(--accent-secondary);
+            box-shadow: 0 0 32px rgba(45, 212, 191, 0.15), 0 8px 30px rgba(0,0,0,0.3);
+            transform: translateY(-6px);
+        }
+
+        .premium-card.clickable:hover::before {
+            opacity: 1;
+        }
+
+        .launch-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 1.2rem;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.25);
+            padding: 5px 12px;
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+        }
+
+        .premium-card.clickable:hover .launch-badge {
+            background: rgba(45, 212, 191, 0.2);
+            border-color: rgba(45, 212, 191, 0.5);
+        }
+
+        .launch-badge .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-secondary);
+            animation: pulse-dot 1.5s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.7); }
+        }
+
         /* ---------------- MODAL & UI ---------------- */
         .cta-btn-premium {
             background: white;
@@ -246,7 +306,18 @@
             <span class="tool-tag">AI Compliance Suite</span>
             <h1>Modular SaaS Platform</h1>
             <div class="premium-grid">
-                <div class="premium-card"><i class="fas fa-brain"></i><h3>AI Gap Analysis</h3><p>LLM-powered detection of compliance gaps in policies and workflows.</p></div>
+
+                <!-- ✅ UPDATED: AI Gap Analysis card now links to your Netlify deployment -->
+                <div class="premium-card clickable" onclick="window.open('https://your-dpdp-audit.netlify.app', '_blank')">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Gap Analysis</h3>
+                    <p>LLM-powered detection of compliance gaps in policies and workflows.</p>
+                    <span class="launch-badge">
+                        <span class="dot"></span>
+                        Launch Audit Tool →
+                    </span>
+                </div>
+
                 <div class="premium-card"><i class="fas fa-chart-line"></i><h3>Continuous Monitoring</h3><p>Real-time compliance posture tracking and drift alerts.</p></div>
                 <div class="premium-card"><i class="fas fa-cookie-bite"></i><h3>Consent Automation</h3><p>Lifecycle management and audit-ready consent evidence.</p></div>
                 <div class="premium-card"><i class="fas fa-database"></i><h3>Dark Data Discovery</h3><p>ML-driven detection of hidden personal data in unstructured sources.</p></div>
@@ -257,6 +328,7 @@
                     <p>Role-based awareness modules with certification and audit reporting.</p>
                     <a href="https://dpdp-awareness.onrender.com/" target="_blank" class="mini-cta">Access Awareness Program →</a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -283,7 +355,7 @@
     <section id="investor" class="tab-content">
         <div class="glass-card">
             <span class="tool-tag">Angel Opportunity</span>
-            <h1>India’s AI-First DPDP Infrastructure Play</h1>
+            <h1>India's AI-First DPDP Infrastructure Play</h1>
             <div class="grid-layout">
                 <div class="card-item"><h3>🚨 Problem</h3><p style="color: var(--text-muted);">Fragmented compliance tools and heavy consultancy dependency.</p></div>
                 <div class="card-item"><h3>💡 Solution</h3><p style="color: var(--text-muted);">AI-native modular compliance SaaS platform.</p></div>
