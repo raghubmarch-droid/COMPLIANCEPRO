@@ -3,459 +3,1180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompliancePro | AI-Native DPDP Compliance Platform</title>
 
+    <!-- ═══════════════════════════════════════════════════
+         PRIMARY SEO META TAGS
+    ═══════════════════════════════════════════════════ -->
+    <title>DPDP Compliance Audit & AI Gap Analysis | dpdpaudits.in – India's Premier DPDP Platform</title>
+    <meta name="description" content="India's leading AI-native DPDP compliance platform. Get instant gap analysis, consent management, dark data discovery & employee training for the Digital Personal Data Protection Act 2023. Trusted by businesses across India.">
+    <meta name="keywords" content="DPDP compliance, DPDP audit India, Digital Personal Data Protection Act, DPDP gap analysis, data privacy India, DPDP consultant Bengaluru, DPDP training, personal data protection India, DPDP 2023, data compliance software India">
+    <meta name="author" content="CompliancePro Solutions, Bengaluru">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://dpdpaudits.in/">
+
+    <!-- ═══════════════════════════════════════════════════
+         OPEN GRAPH / SOCIAL
+    ═══════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DPDP Compliance Audit & AI Gap Analysis | dpdpaudits.in">
+    <meta property="og:description" content="India's AI-native DPDP compliance SaaS platform. 20 years of IT governance expertise. Launch your DPDP audit in minutes.">
+    <meta property="og:url" content="https://dpdpaudits.in/">
+    <meta property="og:site_name" content="dpdpaudits.in">
+    <meta property="og:image" content="https://dpdpaudits.in/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DPDP Compliance Audit | dpdpaudits.in">
+    <meta name="twitter:description" content="AI-native DPDP compliance platform for Indian businesses. Gap analysis, consent management & more.">
+
+    <!-- ═══════════════════════════════════════════════════
+         STRUCTURED DATA (JSON-LD) — boosts Google rich results
+    ═══════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dpdpaudits.in/#org",
+          "name": "CompliancePro Solutions",
+          "url": "https://dpdpaudits.in",
+          "logo": "https://dpdpaudits.in/logo.png",
+          "description": "India's AI-native DPDP compliance platform offering gap analysis, consent management, and employee training under the Digital Personal Data Protection Act 2023.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          },
+          "telephone": "+91-7353528222",
+          "email": "hello@dpdpaudits.in",
+          "foundingDate": "2006",
+          "sameAs": ["https://dpdpaudits.in"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dpdpaudits.in/#website",
+          "url": "https://dpdpaudits.in",
+          "name": "dpdpaudits.in – DPDP Compliance Platform",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://dpdpaudits.in/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "DPDP AI Gap Analysis Tool",
+          "applicationCategory": "BusinessApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "operatingSystem": "Web Browser",
+          "description": "LLM-powered detection of compliance gaps in policies and workflows under India's DPDP Act 2023."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the DPDP Act 2023?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Digital Personal Data Protection Act 2023 is India's landmark data privacy legislation that governs how personal data of Indian citizens must be collected, processed, and stored by businesses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who needs DPDP compliance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Any business operating in India that collects, processes, or stores personal data of Indian citizens — including startups, SMEs, and enterprises — must comply with the DPDP Act 2023."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a DPDP gap analysis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A DPDP gap analysis evaluates your current data practices against the requirements of the Digital Personal Data Protection Act 2023 to identify compliance gaps and prioritise remediation actions."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════
+         FONTS & ICONS
+    ═══════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* ════════════════════════════════════════════
+           INDIAN TRICOLOR DESIGN SYSTEM
+           Saffron #FF6B00 · Navy #0B1D3A · Green #0A7A3B
+        ════════════════════════════════════════════ */
         :root {
-            --bg-dark: #0f172a;
-            --accent-primary: #818cf8;
-            --accent-secondary: #2dd4bf;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --transition-smooth: all 0.4s cubic-bezier(.23,1,.32,1);
+            --saffron:       #FF6B00;
+            --saffron-light: #FF9A3C;
+            --saffron-pale:  rgba(255, 107, 0, 0.12);
+            --navy:          #0B1D3A;
+            --navy-mid:      #132847;
+            --navy-light:    #1C3A61;
+            --india-green:   #0A7A3B;
+            --green-light:   #0D9649;
+            --green-pale:    rgba(10, 122, 59, 0.12);
+            --chakra:        #003087;   /* Ashoka Chakra navy blue */
+            --white:         #FFFFFF;
+            --off-white:     #F5F0E8;  /* warm parchment */
+            --text-main:     #F0EAD6;
+            --text-muted:    #9BB0C9;
+            --border:        rgba(255, 255, 255, 0.08);
+            --border-saffron:rgba(255, 107, 0, 0.25);
+            --card-bg:       rgba(19, 40, 71, 0.75);
+            --ease:          cubic-bezier(.23, 1, .32, 1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
+            font-family: 'DM Sans', sans-serif;
+            background: var(--navy);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
+            overflow-x: hidden;
             background-image:
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 35%),
-                radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 35%);
+                radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255,107,0,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 80% 110%, rgba(10,122,59,0.10) 0%, transparent 55%);
         }
 
-        /* NAV */
+        /* ── Ashoka Chakra top stripe ── */
+        body::before {
+            content: '';
+            position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 9999;
+            background: linear-gradient(90deg, var(--saffron) 33.3%, var(--white) 33.3% 66.6%, var(--india-green) 66.6%);
+        }
+
+        /* ════ SCROLLBAR ════ */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--navy); }
+        ::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 3px; }
+
+        /* ════════════════════════════════════════════
+           HEADER / NAV
+        ════════════════════════════════════════════ */
         header {
-            position: sticky; top: 0; z-index: 1000;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
+            position: sticky; top: 3px; z-index: 1000;
+            background: rgba(11, 29, 58, 0.9);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0;
         }
         .nav-container {
-            max-width: 1200px; margin: auto;
+            max-width: 1280px; margin: auto;
             display: flex; justify-content: space-between; align-items: center;
-            padding: 0 2rem;
+            padding: 0 2rem; height: 68px;
         }
-        .logo {
-            font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.4rem;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .nav-tabs { display: flex; gap: .5rem; flex-wrap: wrap; }
-        .tab-btn {
-            background: transparent; border: 1px solid var(--border-color);
-            padding: .6rem 1.3rem; border-radius: 50px; color: var(--text-muted);
-            cursor: pointer; transition: var(--transition-smooth); font-size: 0.9rem;
-        }
-        .tab-btn.active, .tab-btn:hover { background: var(--accent-primary); color: white; }
 
-        /* LAYOUT */
-        .container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
-        .glass-card {
-            background: var(--card-bg); border: 1px solid var(--border-color);
-            border-radius: 28px; padding: 3rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            text-decoration: none;
         }
-        h1 {
-            font-size: 2.6rem; margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #ffffff, #94a3b8);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        .logo-badge {
+            width: 38px; height: 38px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--saffron), #FF9A3C);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1rem;
+            color: white; letter-spacing: -0.5px; flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(255,107,0,0.4);
         }
-        .tool-tag {
-            font-family: 'JetBrains Mono', monospace; font-size: .75rem;
-            color: var(--accent-secondary); text-transform: uppercase;
-            letter-spacing: 1px; display: block; margin-bottom: .8rem;
+        .logo-text {
+            font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem;
+            line-height: 1.1;
         }
+        .logo-text span { display: block; }
+        .logo-text .l1 { color: var(--white); letter-spacing: -0.3px; }
+        .logo-text .l2 { color: var(--saffron); font-size: 0.7rem; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; }
+
+        .nav-tabs { display: flex; gap: 4px; align-items: center; }
+        .tab-btn {
+            background: transparent; border: 1px solid transparent;
+            padding: .55rem 1.2rem; border-radius: 8px; color: var(--text-muted);
+            cursor: pointer; transition: all .3s var(--ease); font-size: 0.875rem;
+            font-family: 'DM Sans', sans-serif; font-weight: 500;
+        }
+        .tab-btn:hover { color: var(--white); border-color: var(--border); background: rgba(255,255,255,0.04); }
+        .tab-btn.active {
+            background: var(--saffron-pale); color: var(--saffron-light);
+            border-color: var(--border-saffron); font-weight: 600;
+        }
+
+        /* mobile hamburger */
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        .hamburger span {
+            display: block; width: 22px; height: 2px; background: var(--white);
+            margin: 5px 0; border-radius: 2px; transition: all .3s;
+        }
+
+        /* ════════════════════════════════════════════
+           HERO SECTION
+        ════════════════════════════════════════════ */
+        .hero-section {
+            max-width: 1280px; margin: 0 auto; padding: 5rem 2rem 4rem;
+            display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--saffron-pale); border: 1px solid var(--border-saffron);
+            padding: 6px 14px; border-radius: 50px; margin-bottom: 1.5rem;
+            font-size: 0.75rem; font-weight: 600; color: var(--saffron-light);
+            letter-spacing: 0.8px; text-transform: uppercase;
+        }
+        .hero-eyebrow .dot-live {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: var(--saffron); animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,100%{box-shadow:0 0 0 0 rgba(255,107,0,.5)}
+            50%{box-shadow:0 0 0 6px rgba(255,107,0,0)}
+        }
+
+        h1.hero-headline {
+            font-family: 'Sora', sans-serif; font-size: 3.2rem; font-weight: 800;
+            line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 1.5rem;
+            -webkit-text-fill-color: initial; background: none; color: var(--white);
+        }
+        h1.hero-headline .accent-saffron { color: var(--saffron); }
+        h1.hero-headline .accent-green { color: #2ecc71; }
+
+        .hero-desc {
+            font-size: 1.05rem; color: var(--text-muted); max-width: 560px;
+            margin-bottom: 2.5rem; line-height: 1.75;
+        }
+
+        .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, var(--saffron) 0%, #FF9A3C 100%);
+            color: white; padding: .85rem 2rem; border-radius: 10px;
+            font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer;
+            text-decoration: none; transition: all .3s var(--ease);
+            box-shadow: 0 6px 24px rgba(255,107,0,0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(255,107,0,0.5);
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: var(--text-main);
+            padding: .85rem 1.8rem; border-radius: 10px;
+            font-weight: 600; font-size: 0.95rem;
+            border: 1px solid var(--border); cursor: pointer;
+            text-decoration: none; transition: all .3s var(--ease);
+        }
+        .btn-secondary:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
+
+        /* trust badges */
+        .trust-row {
+            display: flex; gap: 1.8rem; flex-wrap: wrap;
+            margin-top: 3rem; padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.82rem; color: var(--text-muted); font-weight: 500;
+        }
+        .trust-item i { color: var(--saffron); }
+
+        /* hero stats card */
+        .hero-stats {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 24px; padding: 2rem;
+            backdrop-filter: blur(12px);
+            position: relative; overflow: hidden;
+        }
+        .hero-stats::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--saffron), var(--saffron-light), var(--india-green));
+        }
+        .stat-item { padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
+        .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .stat-item:first-child { padding-top: 0; }
+        .stat-number {
+            font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800;
+            color: var(--saffron); line-height: 1;
+        }
+        .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; font-weight: 500; }
+
+        /* ════════════════════════════════════════════
+           DPDP LAW BANNER
+        ════════════════════════════════════════════ */
+        .law-banner {
+            max-width: 1280px; margin: 0 auto 3rem; padding: 0 2rem;
+        }
+        .law-inner {
+            background: linear-gradient(135deg, rgba(255,107,0,0.1) 0%, rgba(10,122,59,0.08) 100%);
+            border: 1px solid var(--border-saffron); border-radius: 16px;
+            padding: 1.2rem 2rem;
+            display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+        }
+        .law-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .law-text h4 { font-family: 'Sora', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--saffron-light); margin-bottom: 2px; }
+        .law-text p { font-size: 0.82rem; color: var(--text-muted); }
+        .law-badge {
+            margin-left: auto; background: var(--saffron); color: white;
+            padding: 5px 14px; border-radius: 50px; font-size: 0.75rem;
+            font-weight: 700; letter-spacing: 0.5px; white-space: nowrap; flex-shrink: 0;
+        }
+
+        /* ════════════════════════════════════════════
+           MAIN CONTENT AREA
+        ════════════════════════════════════════════ */
+        .container { max-width: 1280px; margin: 0 auto 5rem; padding: 0 2rem; }
+
         .tab-content { display: none; }
-        .tab-content.active { display: block; animation: slideUp 0.5s ease-out; }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(15px); }
+        .tab-content.active { display: block; animation: fadeUp .45s var(--ease); }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ARCHITECTURE IMAGE */
-        .img-container { width: 100%; display: flex; justify-content: center; margin-bottom: 3rem; }
-        .arch-image {
-            max-width: 100%; height: auto; border-radius: 18px;
-            border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        /* section labels */
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+            color: var(--saffron); text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        .section-label::before {
+            content: ''; display: block; width: 20px; height: 2px;
+            background: var(--saffron); border-radius: 1px;
         }
 
-        /* GRIDS */
-        .premium-grid, .grid-layout {
+        h2.section-title {
+            font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800;
+            line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 1.2rem;
+            color: var(--white);
+        }
+        h2.section-title .hl { color: var(--saffron); }
+
+        .section-subtitle {
+            font-size: 1rem; color: var(--text-muted); max-width: 640px;
+            margin-bottom: 2.5rem; line-height: 1.75;
+        }
+
+        /* ════ CARDS ════ */
+        .card-grid {
             display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 1.8rem; margin-top: 2rem;
+            gap: 1.5rem;
         }
-        .premium-card, .card-item {
-            background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color);
-            padding: 2rem; border-radius: 22px; transition: var(--transition-smooth);
+        .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+        .c-card {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 18px; padding: 1.8rem;
+            backdrop-filter: blur(8px);
+            transition: all .35s var(--ease); position: relative; overflow: hidden;
         }
-        .premium-card:hover, .card-item:hover {
-            transform: translateY(-6px); border-color: var(--accent-primary);
+        .c-card::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--saffron), transparent);
+            transform: scaleX(0); transform-origin: left;
+            transition: transform .35s var(--ease);
         }
-        .premium-card i {
-            font-size: 1.6rem; margin-bottom: 1rem;
-            color: var(--accent-primary); display: block;
+        .c-card:hover { transform: translateY(-5px); border-color: var(--border-saffron); }
+        .c-card:hover::after { transform: scaleX(1); }
+
+        .c-card.highlight-green {
+            border-color: rgba(10,122,59,0.3);
+            background: rgba(10,122,59,0.07);
         }
-        .highlight-premium, .highlight-card {
-            border: 1px solid var(--accent-secondary);
-            background: rgba(45, 212, 191, 0.08);
-        }
-        .mini-cta {
-            display: inline-block; margin-top: 1.2rem; font-size: .85rem;
-            font-weight: 600; text-decoration: none; color: var(--accent-secondary);
+        .c-card.highlight-green::after { background: linear-gradient(90deg, var(--india-green), transparent); }
+        .c-card.highlight-green:hover { border-color: rgba(10,122,59,0.5); }
+
+        .c-card.clickable { cursor: pointer; }
+        .c-card.clickable:hover {
+            border-color: var(--border-saffron);
+            box-shadow: 0 0 40px rgba(255,107,0,0.12);
         }
 
-        /* AI GAP ANALYSIS CARD — clickable */
-        .premium-card.clickable {
-            cursor: pointer; position: relative; overflow: hidden;
+        .card-icon {
+            width: 48px; height: 48px; border-radius: 12px;
+            background: var(--saffron-pale); border: 1px solid var(--border-saffron);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.2rem;
         }
-        .premium-card.clickable::before {
-            content: ''; position: absolute; inset: 0; border-radius: 22px;
-            background: radial-gradient(circle at 50% 0%, rgba(45,212,191,0.08), transparent 70%);
-            opacity: 0; transition: var(--transition-smooth);
-        }
-        .premium-card.clickable:hover {
-            border-color: var(--accent-secondary);
-            box-shadow: 0 0 32px rgba(45,212,191,0.15), 0 8px 30px rgba(0,0,0,0.3);
-            transform: translateY(-6px);
-        }
-        .premium-card.clickable:hover::before { opacity: 1; }
+        .card-icon i { font-size: 1.2rem; color: var(--saffron); }
+        .card-icon.green { background: var(--green-pale); border-color: rgba(10,122,59,0.25); }
+        .card-icon.green i { color: var(--green-light); }
 
-        .launch-badge {
+        .c-card h3 {
+            font-family: 'Sora', sans-serif; font-size: 1.05rem; font-weight: 700;
+            margin-bottom: .5rem; color: var(--white);
+        }
+        .c-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+
+        .launch-pill {
             display: inline-flex; align-items: center; gap: 6px;
-            margin-top: 1.2rem; font-size: .82rem; font-weight: 600;
-            color: var(--accent-secondary); background: rgba(45,212,191,0.1);
-            border: 1px solid rgba(45,212,191,0.25); padding: 5px 12px;
-            border-radius: 50px; transition: var(--transition-smooth);
+            margin-top: 1.2rem; background: rgba(255,107,0,0.12);
+            border: 1px solid rgba(255,107,0,0.3); padding: 5px 13px;
+            border-radius: 50px; font-size: 0.78rem; font-weight: 600; color: var(--saffron-light);
+            transition: all .3s;
         }
-        .premium-card.clickable:hover .launch-badge {
-            background: rgba(45,212,191,0.2); border-color: rgba(45,212,191,0.5);
-        }
-        .launch-badge .dot {
-            width: 6px; height: 6px; border-radius: 50%;
-            background: var(--accent-secondary); animation: pulse-dot 1.5s infinite;
-        }
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50%       { opacity: 0.4; transform: scale(0.7); }
+        .c-card.clickable:hover .launch-pill { background: rgba(255,107,0,0.22); }
+        .launch-pill .dot {
+            width: 6px; height: 6px; border-radius: 50%; background: var(--saffron);
+            animation: pulse 1.6s infinite;
         }
 
-        /* ============================================================
-           AUDIT TOOL OVERLAY
-           — covers full viewport, URL stays dpdpaudits.in throughout
-           ============================================================ */
+        .mini-link {
+            display: inline-flex; align-items: center; gap: 6px; margin-top: 1.2rem;
+            font-size: 0.82rem; font-weight: 600; color: var(--green-light);
+            text-decoration: none; transition: gap .2s;
+        }
+        .mini-link:hover { gap: 10px; }
+
+        /* ════ ARCHITECTURE SECTION ════ */
+        .arch-image {
+            width: 100%; border-radius: 18px; border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0,0,0,.4); margin-bottom: 2rem;
+        }
+
+        /* ════ INVESTOR SECTION ════ */
+        .inv-header {
+            background: linear-gradient(135deg, var(--saffron-pale), var(--green-pale));
+            border: 1px solid var(--border-saffron); border-radius: 18px;
+            padding: 2.5rem; margin-bottom: 2rem; position: relative; overflow: hidden;
+        }
+        .inv-header::before {
+            content: '🇮🇳'; position: absolute; right: 2rem; top: 50%;
+            transform: translateY(-50%); font-size: 5rem; opacity: 0.15;
+        }
+
+        /* ════ CONTACT ════ */
+        .contact-card {
+            background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 18px; padding: 2rem; text-align: center;
+            transition: all .3s var(--ease);
+        }
+        .contact-card:hover { border-color: var(--border-saffron); transform: translateY(-4px); }
+        .contact-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: var(--saffron-pale); border: 1px solid var(--border-saffron);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .contact-icon i { font-size: 1.4rem; color: var(--saffron); }
+        .contact-card h4 { font-family: 'Sora', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: .4rem; }
+        .contact-card p, .contact-card a { color: var(--white); font-weight: 500; text-decoration: none; }
+
+        /* ════ FAQ (SEO boost) ════ */
+        .faq-item {
+            border: 1px solid var(--border); border-radius: 14px;
+            overflow: hidden; margin-bottom: 1rem;
+        }
+        .faq-q {
+            width: 100%; background: var(--card-bg); border: none; cursor: pointer;
+            padding: 1.2rem 1.5rem; text-align: left; color: var(--white);
+            font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600;
+            display: flex; justify-content: space-between; align-items: center;
+            transition: background .2s;
+        }
+        .faq-q:hover { background: rgba(255,107,0,0.06); }
+        .faq-q i { color: var(--saffron); transition: transform .3s; }
+        .faq-q.open i { transform: rotate(180deg); }
+        .faq-a {
+            max-height: 0; overflow: hidden; transition: max-height .4s var(--ease);
+            background: rgba(19,40,71,0.5);
+        }
+        .faq-a.open { max-height: 300px; }
+        .faq-a p { padding: 1rem 1.5rem 1.4rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+        /* ════════════════════════════════════════════
+           AUDIT OVERLAY
+        ════════════════════════════════════════════ */
         #auditOverlay {
-            display: none;
-            position: fixed; inset: 0; z-index: 5000;
-            flex-direction: column;
-            background: #0f172a;
+            display: none; position: fixed; inset: 0; z-index: 5000;
+            flex-direction: column; background: var(--navy);
         }
         #auditOverlay.open { display: flex; }
 
-        /* Sticky top bar */
         .audit-topbar {
             display: flex; align-items: center; justify-content: space-between;
-            padding: 0 1.5rem; height: 52px; min-height: 52px;
-            background: rgba(15, 23, 42, 0.97);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0 1.5rem; height: 54px; min-height: 54px;
+            background: rgba(11,29,58,0.97); border-bottom: 1px solid var(--border);
             backdrop-filter: blur(12px); flex-shrink: 0;
         }
         .audit-topbar-left { display: flex; align-items: center; gap: 1rem; }
-
         .back-btn {
             display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
-            color: #94a3b8; padding: 6px 14px; border-radius: 50px;
-            font-size: 0.82rem; cursor: pointer; font-family: 'Inter', sans-serif;
-            transition: var(--transition-smooth);
+            background: rgba(255,107,0,0.1); border: 1px solid var(--border-saffron);
+            color: var(--saffron-light); padding: 6px 14px; border-radius: 8px;
+            font-size: 0.82rem; cursor: pointer; font-family: 'DM Sans', sans-serif;
+            transition: all .3s; font-weight: 600;
         }
-        .back-btn:hover {
-            background: rgba(255,255,255,0.1); color: #f8fafc;
-            border-color: rgba(255,255,255,0.25);
-        }
+        .back-btn:hover { background: rgba(255,107,0,0.2); }
         .topbar-brand {
-            font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 700;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            font-family: 'Sora', sans-serif; font-size: 0.95rem; font-weight: 800;
+            color: var(--white); letter-spacing: -0.3px;
         }
-        .topbar-divider { color: rgba(255,255,255,0.15); font-size: 1rem; }
-        .topbar-tool-label { font-size: 0.82rem; color: var(--text-muted); letter-spacing: 0.5px; }
-
+        .topbar-divider { color: rgba(255,255,255,0.15); }
+        .topbar-tool-label { font-size: 0.82rem; color: var(--text-muted); }
         .topbar-domain {
-            font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
-            color: rgba(45,212,191,0.7); display: flex; align-items: center; gap: 6px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+            color: rgba(255,107,0,0.75); display: flex; align-items: center; gap: 6px;
         }
         .topbar-domain-dot {
-            width: 7px; height: 7px; border-radius: 50%;
-            background: var(--accent-secondary); animation: pulse-dot 2s infinite;
+            width: 6px; height: 6px; border-radius: 50%; background: var(--saffron);
+            animation: pulse 2s infinite;
         }
-
-        /* iframe fills everything below the topbar */
         #auditFrame { flex: 1; width: 100%; border: none; }
 
-        /* MODAL */
-        .cta-btn-premium {
-            background: white; color: black; padding: 1rem 2.5rem; border-radius: 100px;
-            font-weight: 600; border: none; cursor: pointer; transition: var(--transition-smooth);
-            text-decoration: none; display: inline-block;
-        }
+        /* ════════════════════════════════════════════
+           MODAL
+        ════════════════════════════════════════════ */
         .modal {
             display: none; position: fixed; inset: 0;
-            background: rgba(0,0,0,.7); backdrop-filter: blur(6px); z-index: 3000;
+            background: rgba(0,0,0,.75); backdrop-filter: blur(8px); z-index: 3000;
+            align-items: center; justify-content: center;
         }
+        .modal.open { display: flex; }
         .modal-content {
-            background: #1e293b; max-width: 420px; margin: 10% auto;
-            padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border-color);
+            background: var(--navy-mid); max-width: 440px; width: 90%;
+            padding: 2.5rem; border-radius: 22px; border: 1px solid var(--border);
+            position: relative; animation: fadeUp .3s var(--ease);
         }
-        .modal-content input {
-            width: 100%; padding: .9rem; margin-bottom: 1rem; border-radius: 10px;
-            background: rgba(255,255,255,.05); border: 1px solid var(--border-color); color: white;
+        .modal-close {
+            position: absolute; top: 1rem; right: 1rem;
+            background: rgba(255,255,255,0.06); border: 1px solid var(--border);
+            color: var(--text-muted); width: 30px; height: 30px; border-radius: 8px;
+            cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center;
+            transition: all .2s;
         }
+        .modal-close:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+        .modal-content h2 {
+            font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800;
+            margin-bottom: 1.5rem; color: var(--white);
+        }
+        .modal-input {
+            width: 100%; padding: .85rem 1rem; margin-bottom: .9rem;
+            border-radius: 10px; background: rgba(255,255,255,.04);
+            border: 1px solid var(--border); color: var(--white);
+            font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+            transition: border-color .2s; outline: none;
+        }
+        .modal-input:focus { border-color: var(--saffron); }
+        .modal-input::placeholder { color: var(--text-muted); }
 
+        /* ════════════════════════════════════════════
+           FOOTER
+        ════════════════════════════════════════════ */
         footer {
-            text-align: center; padding: 3rem 0;
-            border-top: 1px solid var(--border-color); margin-top: 4rem; color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
         }
+        .footer-inner {
+            max-width: 1280px; margin: auto;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;
+        }
+        .footer-logo { font-family: 'Sora', sans-serif; font-weight: 700; color: var(--white); }
+        .footer-logo span { color: var(--saffron); }
+        .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); font-size: 0.85rem; text-decoration: none; transition: color .2s; }
+        .footer-links a:hover { color: var(--saffron); }
+        .footer-legal { color: var(--text-muted); font-size: 0.78rem; }
 
-        @media(max-width: 1000px) { .grid-layout, .premium-grid { grid-template-columns: repeat(2,1fr); } }
-        @media(max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; }
-            .grid-layout, .premium-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 2rem; }
-            .audit-topbar-left { gap: .6rem; }
-            .topbar-brand, .topbar-divider, .topbar-tool-label { display: none; }
+        /* ════════════════════════════════════════════
+           RESPONSIVE
+        ════════════════════════════════════════════ */
+        @media (max-width: 1100px) {
+            .hero-section { grid-template-columns: 1fr; }
+            .hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+            .stat-item { border-bottom: none; padding: 1rem; border: 1px solid var(--border); border-radius: 12px; }
+            .card-grid { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width: 768px) {
+            h1.hero-headline { font-size: 2.2rem; letter-spacing: -1px; }
+            .nav-tabs { display: none; flex-direction: column; width: 100%; padding: 1rem 0; }
+            .nav-tabs.open { display: flex; }
+            .hamburger { display: block; }
+            .nav-container { flex-wrap: wrap; height: auto; padding: .8rem 1.5rem; }
+            .card-grid { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .audit-topbar-left .topbar-brand, .audit-topbar-left .topbar-divider, .audit-topbar-left .topbar-tool-label { display: none; }
+        }
+        @media (max-width: 500px) {
+            .law-inner { flex-direction: column; gap: 1rem; }
+            .law-badge { margin-left: 0; }
         }
     </style>
 </head>
 <body>
 
-<!-- ===================== MAIN NAV ===================== -->
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
 <header>
     <div class="nav-container">
-        <div class="logo">COMPLIANCE<span style="color:#94a3b8">PRO</span></div>
-        <nav class="nav-tabs">
+        <a class="logo" href="/" aria-label="dpdpaudits.in Home">
+            <div class="logo-badge">DP</div>
+            <div class="logo-text">
+                <span class="l1">dpdpaudits<span style="color:var(--saffron)">.in</span></span>
+                <span class="l2">India's DPDP Compliance Platform</span>
+            </div>
+        </a>
+        <button class="hamburger" aria-label="Toggle menu" onclick="toggleMobile()">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-tabs" id="navTabs" role="navigation" aria-label="Main navigation">
             <button class="tab-btn active" onclick="showTab(event,'about')">Expertise</button>
             <button class="tab-btn" onclick="showTab(event,'services')">Platform</button>
             <button class="tab-btn" onclick="showTab(event,'architecture')">Architecture</button>
             <button class="tab-btn" onclick="showTab(event,'investor')">Investor</button>
+            <button class="tab-btn" onclick="showTab(event,'faq')">FAQs</button>
             <button class="tab-btn" onclick="showTab(event,'contact')">Connect</button>
         </nav>
     </div>
 </header>
 
-<!-- ===================== PAGE SECTIONS ===================== -->
-<div class="container">
-
-    <section id="about" class="tab-content active">
-        <div class="glass-card">
-            <span class="tool-tag">Two Decades of Excellence</span>
-            <h1>Precision in IT Governance.</h1>
-            <p style="color:var(--text-muted); max-width:800px; margin-bottom:2rem;">
-                Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail.
-                Today, we bridge the gap between technical operations and strategic oversight.
-            </p>
-            <div class="grid-layout">
-                <div class="card-item">
-                    <i class="fas fa-microscope" style="color:var(--accent-primary);font-size:2rem;margin-bottom:1.5rem;"></i>
-                    <h3>Quality Assurance</h3>
-                    <p style="color:var(--text-muted);font-size:0.9rem;">20 years of ensuring software excels under regulatory pressure.</p>
-                </div>
-                <div class="card-item">
-                    <i class="fas fa-fingerprint" style="color:var(--accent-primary);font-size:2rem;margin-bottom:1.5rem;"></i>
-                    <h3>DPDP Strategy</h3>
-                    <p style="color:var(--text-muted);font-size:0.9rem;">Navigating India's new regulatory chapter with a roadmap.</p>
-                </div>
-                <div class="card-item">
-                    <i class="fas fa-shield-halved" style="color:var(--accent-primary);font-size:2rem;margin-bottom:1.5rem;"></i>
-                    <h3>Governance</h3>
-                    <p style="color:var(--text-muted);font-size:0.9rem;">Implementing international standards that ensure accountability.</p>
-                </div>
-            </div>
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero-section" aria-labelledby="hero-title" id="hero">
+    <div>
+        <div class="hero-eyebrow">
+            <span class="dot-live"></span>
+            India's DPDP Act 2023 — Now in Force
         </div>
-    </section>
-
-    <section id="services" class="tab-content">
-        <div class="glass-card">
-            <span class="tool-tag">AI Compliance Suite</span>
-            <h1>Modular SaaS Platform</h1>
-            <div class="premium-grid">
-
-                <!-- ✅ AI Gap Analysis — opens audit tool inside same page, URL stays dpdpaudits.in -->
-                <div class="premium-card clickable" onclick="openAuditTool()">
-                    <i class="fas fa-brain"></i>
-                    <h3>AI Gap Analysis</h3>
-                    <p>LLM-powered detection of compliance gaps in policies and workflows.</p>
-                    <span class="launch-badge"><span class="dot"></span> Launch Audit Tool →</span>
-                </div>
-
-                <div class="premium-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Continuous Monitoring</h3>
-                    <p>Real-time compliance posture tracking and drift alerts.</p>
-                </div>
-                <div class="premium-card">
-                    <i class="fas fa-cookie-bite"></i>
-                    <h3>Consent Automation</h3>
-                    <p>Lifecycle management and audit-ready consent evidence.</p>
-                </div>
-                <div class="premium-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Dark Data Discovery</h3>
-                    <p>ML-driven detection of hidden personal data in unstructured sources.</p>
-                </div>
-                <div class="premium-card">
-                    <i class="fas fa-link"></i>
-                    <h3>Immutable Logs</h3>
-                    <p>Hash-based tamper-proof audit trail system.</p>
-                </div>
-                <div class="premium-card highlight-premium">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>DPDP Employee Training</h3>
-                    <p>Role-based awareness modules with certification and audit reporting.</p>
-                    <a href="https://dpdp-awareness.onrender.com/" target="_blank" class="mini-cta">Access Awareness Program →</a>
-                </div>
-
-            </div>
+        <h1 class="hero-headline" id="hero-title">
+            AI-Native<br>
+            <span class="accent-saffron">DPDP Compliance</span><br>
+            Built for <span class="accent-green">Bharat</span>
+        </h1>
+        <p class="hero-desc">
+            From instant gap analysis to consent lifecycle management — our platform helps Indian businesses
+            achieve full Digital Personal Data Protection Act compliance with precision and speed.
+        </p>
+        <div class="hero-cta-row">
+            <button class="btn-primary" onclick="openAuditTool()">
+                <i class="fas fa-brain" aria-hidden="true"></i> Launch Free Gap Analysis
+            </button>
+            <button class="btn-secondary" onclick="showTab(event,'contact'); document.getElementById('contact').scrollIntoView()">
+                <i class="fas fa-calendar" aria-hidden="true"></i> Book a Consultation
+            </button>
         </div>
-    </section>
-
-    <section id="architecture" class="tab-content">
-        <div class="glass-card">
-            <span class="tool-tag">Scalable SaaS Design</span>
-            <div class="img-container">
-                <img src="platform-architecture.png" alt="CompliancePro Platform Architecture" class="arch-image">
-            </div>
-            <div class="grid-layout">
-                <div class="card-item"><h3>Data Ingestion</h3><p style="color:var(--text-muted);">APIs, logs, CRMs, cloud connectors.</p></div>
-                <div class="card-item"><h3>AI Intelligence Layer</h3><p style="color:var(--text-muted);">LLMs for policy review and ML for data discovery.</p></div>
-                <div class="card-item"><h3>Compliance Engine</h3><p style="color:var(--text-muted);">Consent workflows and breach orchestration.</p></div>
-                <div class="card-item"><h3>Observability</h3><p style="color:var(--text-muted);">Continuous posture monitoring and alerts.</p></div>
-                <div class="card-item"><h3>Governance Dashboard</h3><p style="color:var(--text-muted);">Board-level reporting and risk heatmaps.</p></div>
-                <div class="card-item highlight-card"><h3>Human Layer</h3><p style="color:var(--text-muted);">Employee awareness and certification tracking.</p></div>
-            </div>
+        <div class="trust-row">
+            <div class="trust-item"><i class="fas fa-shield-halved" aria-hidden="true"></i> 20 Years IT Governance</div>
+            <div class="trust-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bengaluru, India</div>
+            <div class="trust-item"><i class="fas fa-gavel" aria-hidden="true"></i> DPDP Act 2023 Ready</div>
+            <div class="trust-item"><i class="fas fa-lock" aria-hidden="true"></i> AI-Powered Audits</div>
         </div>
-    </section>
-
-    <section id="investor" class="tab-content">
-        <div class="glass-card">
-            <span class="tool-tag">Angel Opportunity</span>
-            <h1>India's AI-First DPDP Infrastructure Play</h1>
-            <div class="grid-layout">
-                <div class="card-item"><h3>🚨 Problem</h3><p style="color:var(--text-muted);">Fragmented compliance tools and heavy consultancy dependency.</p></div>
-                <div class="card-item"><h3>💡 Solution</h3><p style="color:var(--text-muted);">AI-native modular compliance SaaS platform.</p></div>
-                <div class="card-item"><h3>📈 Market</h3><p style="color:var(--text-muted);">1M+ Indian businesses impacted by DPDP.</p></div>
-                <div class="card-item"><h3>💰 Revenue</h3><p style="color:var(--text-muted);">Annual SaaS + per-employee training license.</p></div>
-                <div class="card-item"><h3>🧠 Moat</h3><p style="color:var(--text-muted);">AI compliance models + regulatory data network effects.</p></div>
-                <div class="card-item highlight-card"><h3>🚀 Traction Strategy</h3><p style="color:var(--text-muted);">DPDP Awareness rollout + Bengaluru tech early adopters.</p></div>
-            </div>
+    </div>
+    <div class="hero-stats" role="region" aria-label="Key statistics">
+        <div class="stat-item">
+            <div class="stat-number">1M+</div>
+            <div class="stat-label">Indian businesses impacted by DPDP</div>
         </div>
-    </section>
-
-    <section id="contact" class="tab-content">
-        <div class="glass-card" style="text-align:center;">
-            <h1>Start the Conversation.</h1>
-            <p style="color:var(--text-muted);margin-bottom:3rem;">Consultancy specialized for India's DPDP landscape.</p>
-            <div style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:3rem;">
-                <div><i class="fas fa-paper-plane" style="color:var(--accent-primary);font-size:1.5rem;margin-bottom:1rem;"></i><p>sales@dpdpaudits.in</p></div>
-                <div><i class="fas fa-location-dot" style="color:var(--accent-secondary);font-size:1.5rem;margin-bottom:1rem;"></i><p>Bengaluru, India</p></div>
-                <div><i class="fas fa-phone" style="color:var(--accent-primary);font-size:1.5rem;margin-bottom:1rem;"></i><p>+91 7353528222</p></div>
-            </div>
-            <button class="cta-btn-premium" onclick="openModal()">Book Appointment</button>
+        <div class="stat-item">
+            <div class="stat-number">₹250Cr+</div>
+            <div class="stat-label">Maximum penalty per violation</div>
         </div>
-    </section>
+        <div class="stat-item">
+            <div class="stat-number">20yr</div>
+            <div class="stat-label">IT governance & QA expertise</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Compliance modules available</div>
+        </div>
+    </div>
+</section>
 
-</div>
-
-<footer>
-    <p>&copy; 2026 CompliancePro Solutions. 20 Years of IT Integrity.</p>
-</footer>
-
-<!-- Appointment Modal -->
-<div id="appointmentModal" class="modal">
-    <div class="modal-content">
-        <span style="float:right;cursor:pointer;" onclick="closeModal()">&times;</span>
-        <h2>Book Appointment</h2>
-        <form id="appointmentForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <button class="cta-btn-premium" style="width:100%;border-radius:10px;">Submit Request</button>
-        </form>
+<!-- ══════════════════════════════════════════
+     DPDP LAW ALERT BANNER
+══════════════════════════════════════════ -->
+<div class="law-banner" role="alert" aria-label="Regulatory alert">
+    <div class="law-inner">
+        <div class="law-icon" aria-hidden="true">⚖️</div>
+        <div class="law-text">
+            <h4>Digital Personal Data Protection Act, 2023 — India</h4>
+            <p>Non-compliant organisations face penalties up to ₹250 Crore. Are you audit-ready?</p>
+        </div>
+        <div class="law-badge">Act in Force</div>
     </div>
 </div>
 
-<!-- =====================================================================
-     AUDIT TOOL OVERLAY
-     Covers full viewport when open. URL stays dpdpaudits.in throughout.
-     The iframe loads the Netlify-hosted React audit tool inside this page.
-     ===================================================================== -->
-<div id="auditOverlay">
+<!-- ══════════════════════════════════════════
+     MAIN TABS CONTENT
+══════════════════════════════════════════ -->
+<main class="container" id="mainContent">
 
-    <!-- Top bar — always visible -->
+    <!-- ── EXPERTISE TAB ── -->
+    <section id="about" class="tab-content active" aria-labelledby="about-title">
+        <span class="section-label">Two Decades of Excellence</span>
+        <h2 class="section-title" id="about-title">Precision in <span class="hl">IT Governance</span></h2>
+        <p class="section-subtitle">
+            Our 20-year journey started in Software Testing, where we developed an uncompromising eye for detail.
+            Today, we bridge the gap between technical operations and strategic oversight — specialising in India's
+            DPDP compliance landscape.
+        </p>
+        <div class="card-grid">
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
+                <h3>Quality Assurance</h3>
+                <p>20 years of ensuring software and systems excel under regulatory pressure. We bring QA rigour to compliance engineering.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-fingerprint" aria-hidden="true"></i></div>
+                <h3>DPDP Strategy</h3>
+                <p>Navigating India's new data protection chapter with a structured roadmap tailored to your sector and data footprint.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+                <h3>Governance Frameworks</h3>
+                <p>Implementing international standards — ISO 27001, SOC 2, GDPR best practices — adapted for the DPDP Act 2023 requirements.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-file-contract" aria-hidden="true"></i></div>
+                <h3>Policy Architecture</h3>
+                <p>Drafting privacy notices, data processing agreements, and internal policies aligned with DPDP Act obligations.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-user-shield" aria-hidden="true"></i></div>
+                <h3>DPO-as-a-Service</h3>
+                <p>Experienced Data Protection Officers on demand — without the overhead of a full-time hire.</p>
+            </article>
+            <article class="c-card highlight-green">
+                <div class="card-icon green"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                <h3>Startup Fast-Track</h3>
+                <p>Accelerated compliance sprints designed for startups and growth-stage companies needing DPDP readiness fast.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── PLATFORM TAB ── -->
+    <section id="services" class="tab-content" aria-labelledby="services-title">
+        <span class="section-label">AI Compliance Suite</span>
+        <h2 class="section-title" id="services-title">Modular <span class="hl">DPDP Platform</span></h2>
+        <p class="section-subtitle">
+            Eight purpose-built compliance modules, each tackling a distinct challenge under the Digital Personal Data
+            Protection Act — from consent to breach management.
+        </p>
+        <div class="card-grid">
+
+            <article class="c-card clickable" onclick="openAuditTool()" role="button" aria-label="Launch AI Gap Analysis Tool" tabindex="0">
+                <div class="card-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+                <h3>AI Gap Analysis</h3>
+                <p>LLM-powered detection of compliance gaps in your policies and workflows. Instant prioritised remediation report.</p>
+                <span class="launch-pill"><span class="dot" aria-hidden="true"></span> Launch Audit Tool →</span>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                <h3>Continuous Monitoring</h3>
+                <p>Real-time compliance posture tracking and automated drift alerts to keep you DPDP-ready 365 days a year.</p>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-cookie-bite" aria-hidden="true"></i></div>
+                <h3>Consent Automation</h3>
+                <p>Full consent lifecycle management — capture, store, withdraw, and renew — with audit-ready evidence trails.</p>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
+                <h3>Dark Data Discovery</h3>
+                <p>ML-driven detection of hidden personal data lurking in unstructured sources: emails, PDFs, legacy databases.</p>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-link" aria-hidden="true"></i></div>
+                <h3>Immutable Audit Logs</h3>
+                <p>Hash-based, tamper-proof audit trail system ensuring your compliance evidence is court-admissible.</p>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-bell" aria-hidden="true"></i></div>
+                <h3>Breach Notification Engine</h3>
+                <p>Automated data breach detection and notification workflows within DPDP Act mandated timelines.</p>
+            </article>
+
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
+                <h3>Data Mapping & ROPA</h3>
+                <p>Automated Records of Processing Activities mapping across your entire data ecosystem.</p>
+            </article>
+
+            <article class="c-card highlight-green">
+                <div class="card-icon green"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                <h3>DPDP Employee Training</h3>
+                <p>Role-based awareness modules with certification tracking and audit-ready completion reports.</p>
+                <a href="https://dpdp-awareness.onrender.com/" target="_blank" rel="noopener" class="mini-link">
+                    Access Awareness Program <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ── ARCHITECTURE TAB ── -->
+    <section id="architecture" class="tab-content" aria-labelledby="arch-title">
+        <span class="section-label">Scalable SaaS Design</span>
+        <h2 class="section-title" id="arch-title">Platform <span class="hl">Architecture</span></h2>
+        <p class="section-subtitle">A purpose-built compliance stack designed for Indian regulatory scale — modular, secure, and cloud-native.</p>
+
+        <img src="platform-architecture.png" alt="dpdpaudits.in Platform Architecture — AI compliance stack for DPDP Act 2023" class="arch-image" loading="lazy">
+
+        <div class="card-grid">
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-plug" aria-hidden="true"></i></div>
+                <h3>Data Ingestion</h3>
+                <p>APIs, log streams, CRMs, and cloud connectors pull personal data footprint across your stack.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                <h3>AI Intelligence Layer</h3>
+                <p>Large Language Models for policy review and ML classifiers for personal data discovery and risk scoring.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-gears" aria-hidden="true"></i></div>
+                <h3>Compliance Engine</h3>
+                <p>Consent workflows, DSR (Data Subject Request) orchestration, and automated breach response playbooks.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+                <h3>Observability</h3>
+                <p>Continuous compliance posture monitoring, real-time alerts, and SLA-based violation tracking.</p>
+            </article>
+            <article class="c-card">
+                <div class="card-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
+                <h3>Governance Dashboard</h3>
+                <p>Board-level compliance reporting, risk heatmaps, and regulatory submission-ready documentation.</p>
+            </article>
+            <article class="c-card highlight-green">
+                <div class="card-icon green"><i class="fas fa-people-group" aria-hidden="true"></i></div>
+                <h3>Human Awareness Layer</h3>
+                <p>Employee DPDP awareness training with role-based modules, assessments, and certification tracking.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── INVESTOR TAB ── -->
+    <section id="investor" class="tab-content" aria-labelledby="inv-title">
+        <span class="section-label">Angel Opportunity</span>
+        <h2 class="section-title" id="inv-title">India's <span class="hl">AI-First DPDP</span> Infrastructure Play</h2>
+
+        <div class="inv-header">
+            <p style="font-size:0.85rem;color:var(--saffron-light);font-weight:700;margin-bottom:.5rem;">WHY NOW</p>
+            <p style="max-width:680px;color:var(--text-muted);font-size:0.95rem;line-height:1.7;">
+                The DPDP Act 2023 creates a mandatory compliance market for 1M+ Indian businesses.
+                Fragmented tools and consultancy dependency create a ₹10,000Cr+ infrastructure gap we are uniquely positioned to fill.
+            </p>
+        </div>
+
+        <div class="card-grid">
+            <article class="c-card">
+                <h3>🚨 Problem</h3>
+                <p>Fragmented compliance tools, heavy consultancy dependency, and no Indian-first DPDP automation solution at scale.</p>
+            </article>
+            <article class="c-card">
+                <h3>💡 Solution</h3>
+                <p>AI-native, modular DPDP compliance SaaS that automates 80% of compliance work at a fraction of consultancy cost.</p>
+            </article>
+            <article class="c-card">
+                <h3>📈 Market</h3>
+                <p>1M+ Indian businesses mandated to comply. TAM of ₹10,000Cr+ in compliance software and services.</p>
+            </article>
+            <article class="c-card">
+                <h3>💰 Revenue Model</h3>
+                <p>Annual SaaS subscription + per-employee training licence + professional services retainer.</p>
+            </article>
+            <article class="c-card">
+                <h3>🧠 Competitive Moat</h3>
+                <p>India-specific AI compliance models, 20-year regulatory data network effects, and DPO expertise baked into the product.</p>
+            </article>
+            <article class="c-card highlight-green">
+                <h3>🚀 Traction Strategy</h3>
+                <p>DPDP Awareness rollout driving top-of-funnel + Bengaluru tech corridor early adopter programme underway.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ── FAQ TAB (SEO goldmine) ── -->
+    <section id="faq" class="tab-content" aria-labelledby="faq-title">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title" id="faq-title">DPDP Act <span class="hl">FAQs</span></h2>
+        <p class="section-subtitle">Everything Indian businesses need to know about the Digital Personal Data Protection Act 2023.</p>
+
+        <div style="max-width:800px;">
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    What is the Digital Personal Data Protection (DPDP) Act 2023?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>The Digital Personal Data Protection Act 2023 is India's landmark data privacy legislation enacted to protect personal data of Indian citizens. It governs how businesses must collect, process, store, and delete personal data, and grants data principals (individuals) several rights over their data. Non-compliance attracts penalties up to ₹250 Crore.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    Who needs to comply with the DPDP Act in India?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>Any entity — startup, SME, or enterprise — that operates in India and collects, processes, or stores personal data of Indian citizens must comply with the DPDP Act 2023. This includes e-commerce platforms, fintech companies, healthcare providers, HR software, and virtually any digital business with Indian users.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    What is a DPDP Gap Analysis and why do I need one?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>A DPDP gap analysis compares your current data practices against DPDP Act requirements to identify compliance shortfalls. It prioritises remediation actions and gives your legal, tech, and leadership teams a clear roadmap. Our AI-powered gap analysis tool delivers this assessment in minutes — free.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    What are the penalties for DPDP non-compliance?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>The DPDP Act 2023 prescribes penalties up to ₹250 Crore for data breaches and up to ₹200 Crore for failure to implement reasonable security safeguards. Repeated violations can attract higher cumulative penalties. The Data Protection Board of India will adjudicate complaints.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    How long does DPDP compliance implementation take?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>For most organisations, a foundational DPDP compliance programme takes 8–16 weeks depending on complexity. With our AI-native platform, the gap analysis is instant, privacy notices can be generated in days, and training can be deployed organisation-wide within a week. We also offer accelerated startup fast-tracks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                    What is the role of a Data Protection Officer (DPO) under DPDP?
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="faq-a" role="region">
+                    <p>Significant Data Fiduciaries under the DPDP Act must appoint a Data Protection Officer based in India. The DPO serves as the point of contact for data principals and the Data Protection Board. Our DPO-as-a-Service offering provides experienced DPOs on a retainer basis for organisations not ready for a full-time hire.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── CONTACT TAB ── -->
+    <section id="contact" class="tab-content" aria-labelledby="contact-title">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title" id="contact-title">Start the <span class="hl">Conversation</span></h2>
+        <p class="section-subtitle">Consulting specialised for India's DPDP landscape. 20 years of IT integrity at your service.</p>
+
+        <div class="card-grid" style="max-width:700px;margin-bottom:3rem;">
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                <h4>Email Us</h4>
+                <a href="mailto:hello@dpdpaudits.in">hello@dpdpaudits.in</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                <h4>Call / WhatsApp</h4>
+                <a href="tel:+917353528222">+91 73535 28222</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background:var(--green-pale);border-color:rgba(10,122,59,.3);"><i class="fas fa-location-dot" style="color:var(--green-light);" aria-hidden="true"></i></div>
+                <h4>Office</h4>
+                <p>Bengaluru, Karnataka, India</p>
+            </div>
+        </div>
+
+        <button class="btn-primary" onclick="openModal()" style="font-size:1rem;padding:1rem 2.5rem;">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i> Book a Free Consultation
+        </button>
+    </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <div>
+            <div class="footer-logo">DPDP<span>Audits</span>.in</div>
+            <div class="footer-legal" style="margin-top:.4rem;">© 2026 CompliancePro Solutions. 20 Years of IT Integrity.</div>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#" onclick="showTab(event,'about')">Expertise</a>
+            <a href="#" onclick="showTab(event,'services')">Platform</a>
+            <a href="#" onclick="showTab(event,'faq')">DPDP FAQs</a>
+            <a href="#" onclick="showTab(event,'investor')">Investors</a>
+            <a href="#" onclick="showTab(event,'contact')">Contact</a>
+            <a href="https://dpdp-awareness.onrender.com/" target="_blank" rel="noopener">DPDP Training</a>
+        </nav>
+        <div class="footer-legal">Bengaluru, India &nbsp;·&nbsp; DPDP Act 2023 Specialists</div>
+    </div>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     AUDIT OVERLAY
+══════════════════════════════════════════ -->
+<div id="auditOverlay" role="dialog" aria-modal="true" aria-label="AI Gap Analysis Tool">
     <div class="audit-topbar">
         <div class="audit-topbar-left">
-            <button class="back-btn" onclick="closeAuditTool()">&#8592; Back to CompliancePro</button>
-            <span class="topbar-divider">|</span>
-            <span class="topbar-brand">COMPLIANCE<span style="-webkit-text-fill-color:#94a3b8">PRO</span></span>
-            <span class="topbar-divider">›</span>
+            <button class="back-btn" onclick="closeAuditTool()">&#8592; Back to Platform</button>
+            <span class="topbar-divider" aria-hidden="true">|</span>
+            <span class="topbar-brand">dpdpaudits<span style="color:var(--saffron)">.in</span></span>
+            <span class="topbar-divider" aria-hidden="true">›</span>
             <span class="topbar-tool-label">AI Gap Analysis Tool</span>
         </div>
         <div class="topbar-domain">
-            <span class="topbar-domain-dot"></span>
+            <span class="topbar-domain-dot" aria-hidden="true"></span>
             dpdpaudits.in
         </div>
     </div>
+    <iframe id="auditFrame" src="about:blank" title="DPDP AI Gap Analysis Tool — dpdpaudits.in" allow="clipboard-write" loading="lazy"></iframe>
+</div>
 
-    <!-- Audit tool renders here — full height below topbar -->
-    <iframe id="auditFrame" src=" https://gapanalysis.netlify.app" title="DPDP AI Gap Analysis Tool" allow="clipboard-write"></iframe>
-
+<!-- ══════════════════════════════════════════
+     APPOINTMENT MODAL
+══════════════════════════════════════════ -->
+<div id="appointmentModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close modal">×</button>
+        <h2 id="modal-title">Book a Free Consultation</h2>
+        <input class="modal-input" type="text" placeholder="Your Name" aria-label="Your name" required>
+        <input class="modal-input" type="email" placeholder="Work Email" aria-label="Work email" required>
+        <input class="modal-input" type="tel" placeholder="Phone / WhatsApp" aria-label="Phone number" required>
+        <input class="modal-input" type="text" placeholder="Company Name" aria-label="Company name">
+        <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;margin-top:.5rem;">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Request
+        </button>
+    </div>
 </div>
 
 <script>
-    // ✅ Replace this with your actual Netlify URL after deploying the audit tool
-    const AUDIT_TOOL_URL = 'https://your-dpdp-audit.netlify.app';
+    /* ── Tab navigation ── */
+    function showTab(event, tabId) {
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        if (event && event.currentTarget) event.currentTarget.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // close mobile menu
+        document.getElementById('navTabs').classList.remove('open');
+    }
 
+    /* ── Mobile nav ── */
+    function toggleMobile() {
+        document.getElementById('navTabs').classList.toggle('open');
+    }
+
+    /* ── Audit overlay ── */
+    const AUDIT_TOOL_URL = 'https://gapanalysis.netlify.app';
     function openAuditTool() {
         const frame = document.getElementById('auditFrame');
-        // Lazy-load — only set src on first open so it doesn't load on page load
         if (!frame.getAttribute('data-loaded')) {
             frame.src = AUDIT_TOOL_URL;
             frame.setAttribute('data-loaded', 'true');
         }
         document.getElementById('auditOverlay').classList.add('open');
-        document.body.style.overflow = 'hidden'; // freeze background scroll
+        document.body.style.overflow = 'hidden';
     }
-
     function closeAuditTool() {
         document.getElementById('auditOverlay').classList.remove('open');
         document.body.style.overflow = '';
     }
 
-    // Escape key closes the overlay
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeAuditTool();
-    });
-
-    function showTab(event, tabId) {
-        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* ── Appointment modal ── */
+    function openModal() {
+        document.getElementById('appointmentModal').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        document.getElementById('appointmentModal').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function submitForm() {
+        alert('Thank you! We will get back to you within 24 hours.');
+        closeModal();
     }
 
-    function openModal()  { document.getElementById('appointmentModal').style.display = 'block'; }
-    function closeModal() { document.getElementById('appointmentModal').style.display = 'none';  }
+    /* ── FAQ accordion ── */
+    function toggleFaq(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        // close all
+        document.querySelectorAll('.faq-q.open').forEach(b => {
+            b.classList.remove('open');
+            b.setAttribute('aria-expanded','false');
+            b.nextElementSibling.classList.remove('open');
+        });
+        if (!isOpen) {
+            btn.classList.add('open');
+            btn.setAttribute('aria-expanded','true');
+            answer.classList.add('open');
+        }
+    }
+
+    /* ── Keyboard shortcuts ── */
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') { closeAuditTool(); closeModal(); }
+    });
+
+    /* ── Card keyboard accessibility ── */
+    document.querySelectorAll('.c-card.clickable').forEach(card => {
+        card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+        });
+    });
+
+    /* ── Staggered card entrance animation ── */
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationDelay = `${(i % 6) * 60}ms`;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.c-card, .contact-card').forEach(card => observer.observe(card));
 </script>
+
+<style>
+    /* Stagger reveal */
+    .c-card, .contact-card {
+        opacity: 0; transform: translateY(20px);
+        transition: opacity .5s var(--ease), transform .5s var(--ease);
+    }
+    .c-card.visible, .contact-card.visible {
+        opacity: 1; transform: translateY(0);
+    }
+    /* Active tab cards already visible */
+    .tab-content.active .c-card,
+    .tab-content.active .contact-card {
+        opacity: 1; transform: translateY(0);
+    }
+</style>
 
 </body>
 </html>
